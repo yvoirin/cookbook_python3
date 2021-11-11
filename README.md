@@ -9,6 +9,8 @@ Il serait important d'installer :
 * Requests
 * LXML
 
+L'idéal est d'installer Anaconda, car toutes ces librairies y sont incluses.
+
 ## Lire des données
 
 Le répertoire _Reading files_ donne du code pour lire des fichiers:
@@ -17,8 +19,16 @@ Le répertoire _Reading files_ donne du code pour lire des fichiers:
 * xml
 * shapefile (ou autres fichiers spatiaux)
 
-Il y a aussi un exemple pour récupérer un fichier à partir d'une requête HTTP.
+## Écrire des données
+
+Le répertoire _Creating files_ donne du code pour écrire des fichiers:
+* en utilisant GDAL/OGR on peut faire des shapefiles (ou autres fichiers spatiaux)
 
 ## Traiter les données
 
-Le répertoire _Using Numpy_ donne des exemples avec la lib Numpy
+* _Using Numpy_ donne des exemples avec la lib Numpy
+* _Using Pandas_ donne des exemples avec la lib Pandas
+
+## Afficher les résultats
+
+* _Using Matplotlib_ donne des exemples avec la lib Matplotlib
