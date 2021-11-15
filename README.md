@@ -11,6 +11,8 @@ Il serait important d'installer :
 
 L'idéal est d'installer Anaconda, car toutes ces librairies y sont incluses.
 
+Le répertoire _data_ contient des données pour tester les bouts de code.
+
 ## Lire des données
 
 Le répertoire _Reading files_ donne du code pour lire des fichiers:
