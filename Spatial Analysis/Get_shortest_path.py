@@ -3,7 +3,7 @@ __author__ = 'voirin'
 
 # j'importe networkx
 import networkx as nx
-# j'impore pyplot
+# j'importe pyplot
 import matplotlib.pyplot as plt
 # j'importe la lib
 import ogr
@@ -53,18 +53,7 @@ G = nx.Graph()
 G.add_nodes_from(nodes)
 # on ajoute les arrêtes
 G.add_edges_from(edges)
-# pour dessiner le graphe on doit définir un dictionnaire
-pos = {v: v for k,v in enumerate(G.nodes())}
-# on dessine les noeuds
-nx.draw_networkx_nodes(G, pos, node_size=1, node_color="red")
-# on dessine les chemins (simplifiés)
-nx.draw_networkx_edges(G,pos, edge_color= "black", width=1)
 
-# on dessine le graphe
-ax = plt.gca()
-ax.margins(0.01)
-plt.axis("off")
-plt.show()
 
 # on peut définir deux points d'intérêt
 # sur le territoire
@@ -102,13 +91,30 @@ for n in G.nodes():
 print("Le noeud de départ est : %s à une distance de %.2f m" % (node_start, dist))
 print("Le noeud d'arrivée est : %s à une distance de %.2f m" % (node_end, dist2))
 
-
-# j'affiche le chemin à parcourir (avec le poid le plus petit,
+# je cherche le chemin à parcourir (avec le poid le plus petit,
 # autrement dit la longueur la plus petite)
 shortpath = nx.shortest_path(G, source=node_start, target=node_end, weight='length')
+# la liste des chemins à parcourir
+edges_for_short_path = []
 # On parcourt le chemin le plus court
 for index,node in enumerate(shortpath[:-1]):
     # on peut récupérer les infos de chaque tronçon
     data = G.get_edge_data(node, shortpath[index+1])
 
     print("Chemin entre : %s -> %s -- Appelé : %s" % (node, shortpath[index+1], data['name']))
+
+    edges_for_short_path.append((node, shortpath[index+1]))
+# pour dessiner le graphe on doit définir un dictionnaire
+pos = {v: v for k,v in enumerate(G.nodes())}
+# on dessine les noeuds
+nx.draw_networkx_nodes(G, pos, node_size=0.1, node_color="red")
+# on dessine les chemins (simplifiés)
+nx.draw_networkx_edges(G,pos, edge_color= "black", width=1)
+# on dessine le chemin à parcourir en vert
+nx.draw_networkx_edges(G,pos, edgelist=edges_for_short_path, edge_color= "green", width=3)
+
+# on dessine le graphe
+ax = plt.gca()
+ax.margins(0.01)
+plt.axis("off")
+plt.show()
