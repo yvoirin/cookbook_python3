@@ -18,7 +18,7 @@ import pyproj
 from shapely import ops
 
 # mon répertoire à analyser
-workdir = r'D:\Works\PycharmProjects\cookbook_python3\data'
+workdir = r'data'
 # tous les fichiers du répertoire
 files = glob.glob(workdir + '\*.*')
 
