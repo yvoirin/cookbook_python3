@@ -70,6 +70,7 @@ Le répertoire _Spatial Analysis_ donne des exemples d'analyses spatiales :
 * Convertir un fichier de ligne en un réseau -> _Get_circuit.py_ (avec ogr, networkx)
 * Extraire les entités sous un masque -> _Get_features_under_the_mask.py_ (avec ogr)
 * Rechercher le chemin le plus court -> _Get_shortest_path.py_ (avec ogr, networkx)
+* Utiliser un index spatial -> _using_rtree.py_ (avec fiona, rtree)
 
 Le répertoire _Using GeoNames_ donne un exemple d'usage de GeoNames
 * Rechercher la position d'une entité géographique à l'aide du nom -> _search_with_geonames.py_ (avec requests, json)
