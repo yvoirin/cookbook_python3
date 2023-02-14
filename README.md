@@ -96,3 +96,7 @@ Le répertoire _utils_ donne des exemples de scripts souvent utiles :
 * Partir de données XML du web et construire un shapefile -> _from_xml_web_to_shp_file.py_ (bs4, fiona, shapely)
 * Extraire la liste de fichiers d'un répertoire -> _get_files_in_directory.py_ (avec glob)
 * Quelques astuces du langage Python -> _somebasics.py_
+
+## Utiliser DJANGO
+
+Le répertoire _Using django_ donne un exemple de site web en Python avec une carte
