@@ -28,11 +28,13 @@ Le répertoire _Reading files_ donne du code pour lire des fichiers:
 * xml -> _read_from_web.py_ ou _read_xml.py_ (avec bs4)
 * Gtiff (ou autres formats matriciels) -> _read_geotiff.py_ (avec gdal)
 * shapefile (ou autres fichiers spatiaux) -> _read_vector.py_ (avec ogr)
+* Gtiff (ou autres avec rasterio) -> _read_raster_with_rasterio.py_ (avec rasterio)
+* Gtiff (ou autres avec opencv) -> _read_raster_with_opencv.py_ (avec opencv)
+* Vecteurs (avec fiona) -> _read_vector_with_fiona.py_ (avec fiona)
 
 Le répertoire _Reading from DB_ donne des exemples d'échanges avec une base de données PostgreSQL/PostGIS:
 * PostgreSQL/PostGIS -> _read_from_postgis.py_ (avec ogr)
 * PostgreSQL/PostGIS -> _transfer_ToFrom_PostgreSQL_PostGIS.py_ (avec pandas, geopandas, sqlalchemy)
-
 
 ## Écrire des données
 
@@ -46,7 +48,8 @@ en utilisant GDAL/OGR on peut faire des shapefiles (ou autres fichiers spatiaux)
 Le répertoire _Projections_ donne des exemples de manipulations de projection:
 * Reprojeter une géométrie avec OSR -> _reproject_data.py_ (avec ogr, osr)
 * Reprojeter une image et rééchantillonner avec GDAL -> _resample_image.py_ (avec gdal)
-
+* Reprojeter une image avec rasterio -> _reproject_raster_with_rasterio.py_ (avec rasterio)
+* Reprojeter un vecteur avec fiona -> _reproject_vector_with_fiona.py_ (avec fiona)
 ## Manipuler les géométries
 
 Le répertoire _Using shapely_ donne des exemples avec shapely :
@@ -64,6 +67,7 @@ Le répertoire _Image processing_ donne des exemples de traitements d'image :
 * Appliquer MobileNet avec Opencv -> _OpenCV_MobileNet.py_ (opencv, numpy)
 * Traitements de base avec Opencv -> _simple_processing_with_opencv.py_ (opencv)
 * Découper une image comme un puzzle -> _simple_processing_with_pil.py_ (avec pil)
+* Découper une image à partir d'un vecteur -> _clip_raster_with_vector.py_ (avec fiona et rasterio)
 
 Le répertoire _Spatial Analysis_ donne des exemples d'analyses spatiales :
 * Convertir une matrice en un vecteur -> _From_Raster_to_Vector.py_ (avec ogr, gdal, osr)
@@ -71,6 +75,8 @@ Le répertoire _Spatial Analysis_ donne des exemples d'analyses spatiales :
 * Extraire les entités sous un masque -> _Get_features_under_the_mask.py_ (avec ogr)
 * Rechercher le chemin le plus court -> _Get_shortest_path.py_ (avec ogr, networkx)
 * Utiliser un index spatial -> _using_rtree.py_ (avec fiona, rtree)
+* Vectoriser une image -> _From_Raster_to_Vector_with_fiona_rasterio.py_ (avec fiona et rasterio)
+* Rasteriser un vecteur -> _From_Vector_to_Raster_with_fiona_rasterio.py_ (avec fiona et rasterio)
 
 Le répertoire _Using GeoNames_ donne un exemple d'usage de GeoNames
 * Rechercher la position d'une entité géographique à l'aide du nom -> _search_with_geonames.py_ (avec requests, json)
